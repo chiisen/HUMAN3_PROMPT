@@ -31,3 +31,7 @@
 - `PROMPT.md` 為主要維護來源；修改後再將相同意義同步至 `PROMPT_TW.md`。
 - 兩份提示詞以 `prompt-parity` 區段標記對應的重要內容，不要求翻譯逐字一致；新增或重組重要區段時，請在兩份文件保留相同的標記 ID：`model-fundamentals`、`high-risk-safety`、`interview-flow`、`report-format`。
 - 使用 Python 標準函式庫執行 `python scripts/check_prompt_parity.py`，檢查必要區段是否在兩種語言中成對存在、標記唯一且內容非空，無需安裝額外套件。此檢查不判斷翻譯品質或語意是否完全等價，仍需人工校閱。
+
+## Git 推送遠端設定
+
+在已初始化的 Git 專案目錄內執行 `pwsh -File ./setup_git_sync.ps1`，即可設定本專案預期的五個 `origin` 推送目的地。腳本只替換該 repo 本機設定中的 `remote.origin.pushurl` 清單，執行前後都會顯示所有 remote；不會修改 `origin` 的 fetch URL 或其他 remote。可重複執行；執行前請確認目前所在目錄是要設定的 HUMAN3_PROMPT Git checkout。
