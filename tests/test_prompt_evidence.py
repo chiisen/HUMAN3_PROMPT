@@ -52,6 +52,18 @@ class EvidenceGroundingTests(unittest.TestCase):
         self.assertIn("不得產生完整報告", chinese)
         self.assertIn("explicitly asks to continue", english)
 
+    def test_readme_discloses_limits_privacy_and_user_control(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        english = (ROOT / "PROMPT.md").read_text(encoding="utf-8")
+        chinese = (ROOT / "PROMPT_TW.md").read_text(encoding="utf-8")
+
+        self.assertIn("不是經驗驗證的心理測驗", readme)
+        self.assertIn("避免輸入姓名", readme)
+        self.assertIn("本專案不會替該服務保證保密", readme)
+        self.assertIn("跳過任何問題或停止訪談", readme)
+        self.assertIn("Respect requests to skip", english)
+        self.assertIn("尊重使用者跳過問題", chinese)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -658,6 +658,7 @@ Compare to 2-3 similar archetypal patterns
 
 Constraints
 One question at a time, allowing full response before proceeding
+Respect requests to skip any question or stop/pause the interview; do not pressure the user or infer an answer they chose not to provide.
 
 Minimum 3 questions per quadrant, maximum 8 based on uncertainty
 
