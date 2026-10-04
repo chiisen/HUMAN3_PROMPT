@@ -11,6 +11,12 @@ Dan Koe: HUMAN 3.0 Self-Discovery & Metatype Test => 利用 PROMPT 讓 AI 對你
 [PROMPT](./PROMPT.md)
 [PROMPT 中文版本](./PROMPT_TW.md)
 
+## 提示詞維護
+
+- `PROMPT.md` 為主要維護來源；修改後再將相同意義同步至 `PROMPT_TW.md`。
+- 兩份提示詞以 `prompt-parity` 區段標記對應的重要內容，不要求翻譯逐字一致；新增或重組重要區段時，請在兩份文件保留相同的標記 ID：`model-fundamentals`、`high-risk-safety`、`interview-flow`、`report-format`。
+- 使用 Python 標準函式庫執行 `python scripts/check_prompt_parity.py`，檢查必要區段是否在兩種語言中成對存在、標記唯一且內容非空，無需安裝額外套件。此檢查不判斷翻譯品質或語意是否完全等價，仍需人工校閱。
+
 ## 關於此 PROMPT（功能、適用對象、如何依據分析結果幫助自己）
 
 - 主要功能：使用 HUMAN 3.0 的四象限框架，透過適應式面談判定使用者在心智、身體、靈性、職業的層級與階段，找出核心問題、偵測虛假轉化與頻道狀態，並產出 30 / 90 / 6–12 月的具體行動策略與不依發展分級判定適用性的風險提醒。
