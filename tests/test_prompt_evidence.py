@@ -43,6 +43,15 @@ class EvidenceGroundingTests(unittest.TestCase):
         self.assertTrue("Repeat for Body, Spirit, and Vocation" in english)
         self.assertTrue("身體、靈性與職業象限也重複上述證據與不確定性欄位。" in chinese)
 
+    def test_both_prompts_require_summary_confirmation_before_full_report(self):
+        english = (ROOT / "PROMPT.md").read_text(encoding="utf-8")
+        chinese = (ROOT / "PROMPT_TW.md").read_text(encoding="utf-8")
+
+        self.assertIn("Do not generate the full report until the user confirms", english)
+        self.assertIn("先只提供簡短摘要", chinese)
+        self.assertIn("不得產生完整報告", chinese)
+        self.assertIn("explicitly asks to continue", english)
+
 
 if __name__ == "__main__":
     unittest.main()
