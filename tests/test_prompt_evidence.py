@@ -6,6 +6,19 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class EvidenceGroundingTests(unittest.TestCase):
+    def test_policy_prioritizes_evidence_and_does_not_require_catastrophic_predictions(self):
+        """Static policy guard; this does not exercise a language model."""
+        policies = (
+            ("PROMPT.md", "Evidence and user control take priority", "will collapse your", "will eventually destroy"),
+            ("PROMPT_TW.md", "證據與使用者控制優先", "會瓦解你的", "最終會摧毀"),
+        )
+        for filename, priority, collapse, destroy in policies:
+            with self.subTest(filename=filename):
+                prompt = (ROOT / filename).read_text(encoding="utf-8")
+                self.assertIn(priority, prompt)
+                self.assertNotIn(collapse, prompt)
+                self.assertNotIn(destroy, prompt)
+
     def test_english_prompt_requires_traceable_interpretations(self):
         prompt = (ROOT / "PROMPT.md").read_text(encoding="utf-8")
         requirements = (
