@@ -6,6 +6,18 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class EvidenceGroundingTests(unittest.TestCase):
+    def test_interview_policy_defines_question_budget_and_direct_report_transition(self):
+        """Static policy guard; runtime scenarios are documented separately."""
+        requirements = {
+            "PROMPT.md": ("Each question you ask counts", "Stopping overrides the minimum", "without another confirmation"),
+            "PROMPT_TW.md": ("每次提出的問題都計入", "停止優先於最低題數", "不再重複確認"),
+        }
+        for filename, rules in requirements.items():
+            prompt = (ROOT / filename).read_text(encoding="utf-8")
+            for rule in rules:
+                with self.subTest(filename=filename, rule=rule):
+                    self.assertTrue(rule in prompt, f"Missing interview rule: {rule}")
+
     def test_policy_prioritizes_evidence_and_does_not_require_catastrophic_predictions(self):
         """Static policy guard; this does not exercise a language model."""
         policies = (
