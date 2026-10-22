@@ -32,6 +32,12 @@
 - 兩份提示詞以 `prompt-parity` 區段標記對應的重要內容，不要求翻譯逐字一致；新增或重組重要區段時，請在兩份文件保留相同的標記 ID：`model-fundamentals`、`high-risk-safety`、`interview-flow`、`report-format`。
 - 使用 Python 標準函式庫執行 `python scripts/check_prompt_parity.py`，檢查必要區段是否在兩種語言中成對存在、標記唯一、內容非空，並比對兩語區段順序及巢狀關係，無需安裝額外套件。此檢查不判斷翻譯品質或語意是否完全等價，仍需人工校閱；請使用 [重要規則雙語對照](docs/PROMPT_RULES.md) 逐項檢查。
 
+## 驗證方式
+
+在專案根目錄執行 `python -B -m unittest discover -s tests -v` 與 `python -B scripts/check_prompt_parity.py`。Python 版本以 `.python-version` 為準；Git 設定測試需要 Git 與 PowerShell 7，且只操作臨時倉庫。
+
+這些測試包含靜態規則文字檢查與工具行為測試，不能證明模型遵循提示詞。請另依 [對話行為驗收案例](docs/CONVERSATION_ACCEPTANCE.md) 在新對話逐輪執行，使用 [結果模板](docs/ACCEPTANCE_RESULT_TEMPLATE.md) 記錄模型、設定、提示詞 SHA、原始輸出及判定理由。雙語、不同模型與不同版本分開記錄；未執行或未覆蓋的情境不能標為通過。本次建立案例時尚未執行外部模型驗收。
+
 ## Git 推送遠端設定
 
 在已初始化的 Git 專案目錄內執行 `pwsh -File ./setup_git_sync.ps1`，即可設定本專案預期的五個 `origin` 推送目的地。腳本只替換該 repo 本機設定中的 `remote.origin.pushurl` 清單，執行前後都會顯示所有 remote；不會修改 `origin` 的 fetch URL 或其他 remote。可重複執行；執行前請確認目前所在目錄是要設定的 HUMAN3_PROMPT Git checkout。
