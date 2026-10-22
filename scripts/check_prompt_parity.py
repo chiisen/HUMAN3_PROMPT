@@ -57,10 +57,16 @@ def validate_document(text, label):
 
 
 def check_prompt_pair(english_text, chinese_text):
-    return (
+    errors = (
         validate_document(english_text, "PROMPT.md")
         + validate_document(chinese_text, "PROMPT_TW.md")
     )
+    if not errors:
+        english_structure = [match.groups() for match in MARKER.finditer(english_text)]
+        chinese_structure = [match.groups() for match in MARKER.finditer(chinese_text)]
+        if english_structure != chinese_structure:
+            errors.append("Prompt structure differs: section order and nesting must match across languages")
+    return errors
 
 
 def main(argv=None):
@@ -88,7 +94,7 @@ def main(argv=None):
             print(f"FAIL: {error}")
         return 1
 
-    print("PASS: required prompt sections are present, paired, and non-empty in both languages.")
+    print("PASS: required prompt sections are paired, non-empty, and have matching order and nesting. Semantic equivalence is not checked.")
     return 0
 
 

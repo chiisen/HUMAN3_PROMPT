@@ -1,6 +1,7 @@
 from pathlib import Path
 import subprocess
 import sys
+import re
 import tempfile
 import unittest
 
@@ -29,6 +30,51 @@ def render_prompt(text_by_section):
 
 
 class PromptParityTests(unittest.TestCase):
+    def test_pair_rejects_different_section_order(self):
+        sections = {section: "content" for section in REQUIRED_SECTIONS}
+        english = render_prompt(sections)
+        blocks = english.strip().split("\n")
+        chinese = "\n".join(blocks[3:6] + blocks[:3] + blocks[6:])
+        result = self.run_checker(english, chinese)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("structure", result.stdout)
+
+    def test_pair_rejects_different_nesting(self):
+        english = render_prompt({section: "content" for section in REQUIRED_SECTIONS})
+        chinese = english.replace("<!-- prompt-parity:model-fundamentals:end -->\n", "")
+        chinese = chinese.replace(
+            "<!-- prompt-parity:high-risk-safety:end -->",
+            "<!-- prompt-parity:high-risk-safety:end -->\n<!-- prompt-parity:model-fundamentals:end -->",
+        )
+        result = self.run_checker(english, chinese)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("structure", result.stdout)
+
+    def test_evidence_policy_is_inside_interview_section_in_both_languages(self):
+        """Static placement check, not a semantic translation assessment."""
+        for filename, heading in (("PROMPT.md", "Evidence-Grounded Assessment Rules"),
+                                  ("PROMPT_TW.md", "以回答依據進行判讀")):
+            prompt = (ROOT / filename).read_text(encoding="utf-8")
+            section = re.search(
+                r"<!-- prompt-parity:interview-flow:start -->(.*?)<!-- prompt-parity:interview-flow:end -->",
+                prompt, re.DOTALL,
+            ).group(1)
+            with self.subTest(filename=filename):
+                self.assertTrue(heading in section, f"Evidence policy outside interview section: {filename}")
+
+    def test_unknown_and_improperly_nested_markers_fail(self):
+        english = render_prompt({section: "content" for section in REQUIRED_SECTIONS})
+        cases = (
+            english + "<!-- prompt-parity:unknown:start -->x<!-- prompt-parity:unknown:end -->",
+            english.replace("<!-- prompt-parity:model-fundamentals:end -->", "").replace(
+                "<!-- prompt-parity:high-risk-safety:end -->",
+                "<!-- prompt-parity:model-fundamentals:end -->\n<!-- prompt-parity:high-risk-safety:end -->",
+            ),
+        )
+        for chinese in cases:
+            with self.subTest(chinese=chinese):
+                self.assertNotEqual(self.run_checker(english, chinese).returncode, 0)
+
     def run_checker(self, english, traditional_chinese):
         with tempfile.TemporaryDirectory() as temp_dir:
             english_path = Path(temp_dir) / "PROMPT.md"

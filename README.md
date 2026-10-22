@@ -30,7 +30,7 @@
 
 - `PROMPT.md` 為主要維護來源；修改後再將相同意義同步至 `PROMPT_TW.md`。
 - 兩份提示詞以 `prompt-parity` 區段標記對應的重要內容，不要求翻譯逐字一致；新增或重組重要區段時，請在兩份文件保留相同的標記 ID：`model-fundamentals`、`high-risk-safety`、`interview-flow`、`report-format`。
-- 使用 Python 標準函式庫執行 `python scripts/check_prompt_parity.py`，檢查必要區段是否在兩種語言中成對存在、標記唯一且內容非空，無需安裝額外套件。此檢查不判斷翻譯品質或語意是否完全等價，仍需人工校閱。
+- 使用 Python 標準函式庫執行 `python scripts/check_prompt_parity.py`，檢查必要區段是否在兩種語言中成對存在、標記唯一、內容非空，並比對兩語區段順序及巢狀關係，無需安裝額外套件。此檢查不判斷翻譯品質或語意是否完全等價，仍需人工校閱；請使用 [重要規則雙語對照](docs/PROMPT_RULES.md) 逐項檢查。
 
 ## Git 推送遠端設定
 
