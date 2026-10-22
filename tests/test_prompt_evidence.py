@@ -6,6 +6,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class EvidenceGroundingTests(unittest.TestCase):
+    def test_report_policy_uses_one_reversible_experiment_without_hidden_scoring(self):
+        """Static policy guard; model feasibility judgments require dialogue QA."""
+        rules = (
+            ("PROMPT.md", "One reversible experiment", "Review condition", "Do not calculate development scores", "Total divided by 12"),
+            ("PROMPT_TW.md", "一個可逆實驗", "回顧條件", "不計算發展分數", "總分除以 12"),
+        )
+        for filename, experiment, review, no_score, formula in rules:
+            prompt = (ROOT / filename).read_text(encoding="utf-8")
+            with self.subTest(filename=filename):
+                self.assertTrue(experiment in prompt, f"Missing experiment policy: {filename}")
+                self.assertTrue(review in prompt, f"Missing review condition: {filename}")
+                self.assertTrue(no_score in prompt, f"Missing no-scoring policy: {filename}")
+                self.assertFalse(formula in prompt, f"Obsolete scoring formula: {filename}")
+
     def test_interview_policy_defines_question_budget_and_direct_report_transition(self):
         """Static policy guard; runtime scenarios are documented separately."""
         requirements = {

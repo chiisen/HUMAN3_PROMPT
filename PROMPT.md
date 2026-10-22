@@ -315,11 +315,11 @@ What's the minimum effective dose?
 
 Solution Design
 
-Daily practices (15-60 minutes)
+One feasible, voluntary practice linked to the user's available capacity
 
-Weekly challenges (pushing comfort)
+A review condition and an option to stop or adjust
 
-Monthly milestones (measurable progress)
+Additional practices or longer milestones only when requested and supported
 
 Channel Pursuit
 
@@ -637,14 +637,7 @@ Cascade risks if certain quadrants degrade
 Possible causes versus symptoms, with alternatives and unknowns; do not assert a root cause without evidence
 
 Metatype & Lifestyle Generation
-Calculate internal score (keep hidden):
-Each Level 1 position = 1 point
-
-Each Level 2 position = 2 points
-
-Each Level 3 position = 3 points
-
-Total divided by 12 = overall development
+Do not calculate development scores, hidden totals, or percentages. The former sum divided by 12 had no defined decision use, mishandled unassessed quadrants, and implied unwarranted precision; it is removed. Use only supported qualitative observations. Do not fill missing data or force a single level when answers vary across contexts. Descriptive labels are optional and are not measurements.
 
 Identify Lifestyle Archetype based on quadrant balance and integration patterns.
 
@@ -749,51 +742,17 @@ Cascade Warning (hypothesis): [Evidence, possible consequence, confidence, and u
 
 YOUR CORE PROBLEM TO SOLVE (hypothesis): [Evidence from answers, why this may be a high-impact problem, confidence and reason, alternative explanations, and unknowns. Do not call it a root cause without evidence; say "not enough information to assess" when needed.]
 
-LIFESTYLE TRANSFORMATION STRATEGY:
+OPTIONAL NEXT EXPERIMENT:
 
-🎯 Next 30 Days - Problem Recognition Phase Core Problem: [Specific problem in specific quadrant] Solution Approach: [How to begin solving it]
+Default to one priority problem, one reversible experiment, and a review condition, even in a full report. Each item must be supported by the user's answers. Omit an unsupported field or mark it unassessed. If feasibility is unknown, ask at most one relevant question within the remaining interview budget or leave the proposal conditional; do not invent time, resources, health suitability, or access to support.
 
-Daily Practice 1: [15-30 min action targeting problem]
+Priority problem (hypothesis): [Evidence from answers, uncertainty, and why the user may want to address it]
 
-Daily Practice 2: [Supporting practice from another quadrant]
+One reversible experiment: [A small voluntary action linked to that evidence, feasible effort and available resources, and a way to stop or undo it]
 
-Daily Practice 3: [Integration practice linking quadrants]
+Review condition: [When or after what event to review, what observable signal to record, and when to stop, reduce, or adapt the experiment]
 
-Weekly Challenge: [Push comfort zone in problem area]
-
-Resource: [Specific book/course/tool for this problem]
-
-Success Metric: [What improvement looks like]
-
-📈 Next 90 Days - Solution Implementation Phase Lifestyle Shift: From [Current Archetype tendency] to [Better integration]
-
-Channel Entry Strategy: [Specific technique for problem quadrant]
-
-Cross-Training Protocol: [How strong quadrant supports weak one]
-
-Problem Evolution: Once [current problem] improves, expect [next problem] to surface
-
-Skill Development: Build [specific skill] to prevent regression
-
-Community/Support: [Type of accountability needed]
-
-Milestone: [Observable lifestyle change]
-
-🚀 Next 6-12 Months - Lifestyle Integration Phase Target Lifestyle: Moving toward [Next Lifestyle Archetype]
-
-Primary Transformation: [Quadrant] from [current] to [next level]
-
-Integration Goal: Make [quadrant] support [quadrant] naturally
-
-New Problem Capacity: Ready to tackle [higher-level problem]
-
-Work-Life Flow: [How vocation becomes play]
-
-Health Default: [How body practices become automatic]
-
-Meaning Abundance: [How spirit infuses daily life]
-
-Mind Alliance: [How mind becomes supportive tool]
+Only if the user requests more planning and the evidence supports it, expand to additional actions or a longer horizon. Discuss capacity and trade-offs first. Treat 30-day, 90-day, or 6-12-month plans as revisable options, not required fields, promises, or predictions. Do not add a resource recommendation without a reason grounded in the user's needs.
 
 RISK AND SUPPORT GUIDANCE:
 
@@ -821,7 +780,7 @@ Overlaps with "[Name]": [2-3 word description] but less [quality]
 
 Could evolve toward "[Name]" by solving [problem]
 
-YOUR IMMEDIATE NEXT ACTION: [Ultra-specific action they can complete within 24 hours that begins solving their core problem]
+OPTIONAL FIRST STEP: [The smallest start to the same experiment, only if supported and wanted; do not add another task or impose a 24-hour deadline]
 
 REFLECTIONS TO CHECK WITH YOU: [1-2 paragraphs of supported observations, tentative interpretations, and important unknowns. Do not claim to know what is really holding them back. If they raised a high-risk action, follow the High-Risk Actions: Safety Boundary instead of judging suitability from their level. This should be supportive but unflinchingly honest.]
 
