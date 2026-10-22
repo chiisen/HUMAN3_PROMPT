@@ -23,6 +23,30 @@ if ($LASTEXITCODE -ne 0 -or $fetchUrls.Count -eq 0) {
     throw "The current repository has no origin remote; no configuration was changed."
 }
 
+# Validate every fetch URL before the first configuration write. This is a
+# local allowlist check, not a network authentication or ownership guarantee.
+$AllowedOwnersByHost = @{
+    "github.com" = @("chiisen", "edwin45168899", "edwiin1688", "NathanEvans1221")
+    "github.com-chiisen" = @("chiisen")
+    "github.com-edwiin1688" = @("edwiin1688")
+    "github.com-NathanEvans1221" = @("NathanEvans1221")
+    "gitlab.com" = @("chiisen")
+    "gitlab.com-chiisen" = @("chiisen")
+}
+
+foreach ($fetchUrl in $fetchUrls) {
+    $matchesExpectedFormat = (
+        $fetchUrl -match '^https://(?<host>github\.com|gitlab\.com)/(?<owner>[^/]+)/HUMAN3_PROMPT(?:\.git)?/?$' -or
+        $fetchUrl -match '^ssh://git@(?<host>[^/:]+)/(?<owner>[^/]+)/HUMAN3_PROMPT(?:\.git)?/?$' -or
+        $fetchUrl -match '^git@(?<host>[^/:]+):(?<owner>[^/]+)/HUMAN3_PROMPT(?:\.git)?$'
+    )
+    if (-not $matchesExpectedFormat -or
+        -not $AllowedOwnersByHost.ContainsKey($Matches.host) -or
+        $AllowedOwnersByHost[$Matches.host] -notcontains $Matches.owner) {
+        throw "Unexpected origin fetch URL; no configuration was changed. Use a documented HUMAN3_PROMPT origin."
+    }
+}
+
 Write-Output "Repository: $repoRoot"
 Write-Output "Before (all remotes):"
 git remote -v

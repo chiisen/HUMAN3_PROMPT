@@ -7,7 +7,7 @@
 - [x] [#10 校齊雙語區段與規則](https://github.com/chiisen/HUMAN3_PROMPT/issues/10)
 - [x] [#11 建立對話行為驗收案例](https://github.com/chiisen/HUMAN3_PROMPT/issues/11)
 - [x] [#12 縮減報告負擔與移除無用途分數](https://github.com/chiisen/HUMAN3_PROMPT/issues/12)
-- [ ] [#13 CI、快取忽略與 Git 腳本防呆](https://github.com/chiisen/HUMAN3_PROMPT/issues/13)
+- [x] [#13 CI、快取忽略與 Git 腳本防呆](https://github.com/chiisen/HUMAN3_PROMPT/issues/13)
 
 ## HUMAN 3.0 提示詞優化
 

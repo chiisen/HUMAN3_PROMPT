@@ -39,6 +39,16 @@
 
 這些測試包含靜態規則文字檢查與工具行為測試，不能證明模型遵循提示詞。請另依 [對話行為驗收案例](docs/CONVERSATION_ACCEPTANCE.md) 在新對話逐輪執行，使用 [結果模板](docs/ACCEPTANCE_RESULT_TEMPLATE.md) 記錄模型、設定、提示詞 SHA、原始輸出及判定理由。雙語、不同模型與不同版本分開記錄；未執行或未覆蓋的情境不能標為通過。本次建立案例時尚未執行外部模型驗收。
 
+Windows CI 設定於 [validate.yml](.github/workflows/validate.yml)，在 main 推送、Pull Request 或手動觸發時使用 `.python-version` 執行完整測試、區段檢查與已提交差異的空白檢查。PR 比對 base 至 HEAD，推送比對事件 before 至 HEAD；首次推送或手動執行則比對整棵 HEAD。基準不存在會失敗，不會默默略過。官方 Actions 固定至已查證的版本 SHA；升級時需核對來源與執行結果。實際 CI 狀態請以 [Actions](https://github.com/chiisen/HUMAN3_PROMPT/actions/workflows/validate.yml) 對應 commit 的 run 為準；本機通過不代表 CI 已執行。Python 快取由 `.gitignore` 忽略，不需刪除既有檔案。
+
 ## Git 推送遠端設定
 
-在已初始化的 Git 專案目錄內執行 `pwsh -File ./setup_git_sync.ps1`，即可設定本專案預期的五個 `origin` 推送目的地。腳本只替換該 repo 本機設定中的 `remote.origin.pushurl` 清單，執行前後都會顯示所有 remote；不會修改 `origin` 的 fetch URL 或其他 remote。可重複執行；執行前請確認目前所在目錄是要設定的 HUMAN3_PROMPT Git checkout。
+在本專案 Git checkout 或其子目錄內，用腳本實際路徑執行 `pwsh -File ./setup_git_sync.ps1`（根目錄範例），可設定預期的五個 `origin` 推送目的地。任何寫入前會檢查所有 `origin` fetch URL；缺少 origin、主機／擁有者／專案名稱不符時直接拒絕，保留原設定。
+
+支援以下格式，專案名稱限 `HUMAN3_PROMPT`，`.git` 可省略：
+
+- HTTPS：`https://github.com/<owner>/HUMAN3_PROMPT.git`，owner 限 `chiisen`、`edwin45168899`、`edwiin1688`、`NathanEvans1221`；GitLab 限 `https://gitlab.com/chiisen/HUMAN3_PROMPT.git`。
+- SSH：`git@<host>:<owner>/HUMAN3_PROMPT.git` 或 `ssh://git@<host>/<owner>/HUMAN3_PROMPT.git`。正式主機使用上述 owner；既有 SSH 別名僅接受 `github.com-chiisen/chiisen`、`github.com-edwiin1688/edwiin1688`、`github.com-NathanEvans1221/NathanEvans1221`、`gitlab.com-chiisen/chiisen` 的配對（此處以斜線表示主機／擁有者，SCP 格式實際使用冒號）。
+- 不接受本機路徑、自訂埠、其他主機或 owner、附帶查詢參數的 URL；新增目的地需先更新腳本與測試，不能用同名目錄代替來源檢查。
+
+這是本機 URL 白名單防誤操作，不能證明遠端擁有權或排除 Git／SSH 的額外 URL 重寫設定。腳本只替換本機 `remote.origin.pushurl`，不修改 fetch URL、其他 remote 或全域設定；可重複執行，不會連線遠端或推送。本次只測試臨時倉庫，未對目前 checkout 執行設定腳本。
