@@ -39,7 +39,7 @@
 
 這些測試包含靜態規則文字檢查與工具行為測試，不能證明模型遵循提示詞。請另依 [對話行為驗收案例](docs/CONVERSATION_ACCEPTANCE.md) 在新對話逐輪執行，使用 [結果模板](docs/ACCEPTANCE_RESULT_TEMPLATE.md) 記錄模型、設定、提示詞 SHA、原始輸出及判定理由。雙語、不同模型與不同版本分開記錄；未執行或未覆蓋的情境不能標為通過。本次建立案例時尚未執行外部模型驗收。
 
-Windows CI 設定於 [validate.yml](.github/workflows/validate.yml)，在 main 推送、Pull Request 或手動觸發時使用 `.python-version` 執行完整測試、區段檢查與已提交差異的空白檢查。PR 比對 base 至 HEAD，推送比對事件 before 至 HEAD；首次推送或手動執行則比對整棵 HEAD。基準不存在會失敗，不會默默略過。官方 Actions 固定至已查證的版本 SHA；升級時需核對來源與執行結果。實際 CI 狀態請以 [Actions](https://github.com/chiisen/HUMAN3_PROMPT/actions/workflows/validate.yml) 對應 commit 的 run 為準；本機通過不代表 CI 已執行。Python 快取由 `.gitignore` 忽略，不需刪除既有檔案。
+Python 快取由 `.gitignore` 忽略，不需刪除既有檔案。
 
 ## Git 推送遠端設定
 
