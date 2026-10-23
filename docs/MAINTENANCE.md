@@ -13,7 +13,8 @@
 
 ### 簡中版本來源與校對
 
-- `PROMPT_CN.md` 依 [1606b7cdf59cbd57a7277af842f5bbe9334dd538 的 PROMPT_TW.md](https://github.com/chiisen/HUMAN3_PROMPT/blob/1606b7cdf59cbd57a7277af842f5bbe9334dd538/PROMPT_TW.md) 轉換；該來源檔案的 Git blob SHA 為 `9d0a2bb79a37cc46273e790c771b971e0e12f78e`。
+- `PROMPT_CN.md` 首次轉換依 [1606b7cdf59cbd57a7277af842f5bbe9334dd538 的 PROMPT_TW.md](https://github.com/chiisen/HUMAN3_PROMPT/blob/1606b7cdf59cbd57a7277af842f5bbe9334dd538/PROMPT_TW.md) 進行；該歷史來源檔案的 Git blob SHA 為 `9d0a2bb79a37cc46273e790c771b971e0e12f78e`。
+- #14 後續同步將三份提示詞的框架名稱由 HUMAN 3.01 更正為 HUMAN 3.0，並加上非官方來源註記；這些是初次轉換後的修訂。框架名稱沿用原作者的 HUMAN 3.0，本專案修訂以 Git 提交追溯，不另設官方版本號。
 - 本次使用 Windows PowerShell 7 中的 `Microsoft.VisualBasic.Strings.StrConv`，指定 `VbStrConv.SimplifiedChinese` 與 LCID `2052`，僅轉換漢字並保留其餘字元，避免舊式轉換損失圖示。另校正殘留字形與用語：`後→后`、`於→于`、`徵→征`、`麽→么`、`谘→咨`、`蒐→搜`、`重覆→重复`、`反覆→反复`、`回覆→回复`、`计画→计划`。後續更新須同步記錄來源版本，不能把本次 SHA 當成永遠適用的來源。
 - 逐段核對否定詞、題數、跳過／停止、證據規則、摘要確認與高風險行為界線；保留段落、標記、數字、專有名詞與網址。這是修訂版的簡中轉換，不是原作者原文的忠實翻譯。
 - 字形、結構與內容對照不證明不同語言的模型行為等價；簡中版的實際模型對話驗收尚未執行。

@@ -15,7 +15,7 @@
 | 本项目繁体中文修订版 | [PROMPT_TW.md](PROMPT_TW.md) |
 | 本项目简体中文修订版 | [PROMPT_CN.md](PROMPT_CN.md) |
 
-目前仓库中的三份提示词均为社区修订版，内容仍使用“HUMAN 3.01”标示；这是本项目的命名，不代表原作者发布了新版本。简体中文版本由繁中修订版转换并校对；仓库尚未提供独立原文快照或原文的忠实译本。
+目前仓库中的三份提示词均为非官方社区修订版。框架名称沿用 Dan Koe 的 HUMAN 3.0，本项目以 Git 提交标识修订，不另设官方框架版本号。简体中文版本由繁中修订版转换并校对；仓库尚未提供独立原文快照或原文的忠实译本。
 
 ## 开始使用
 
@@ -38,6 +38,6 @@
 
 ## 来源、修订与维护
 
-[变更日志](CHANGELOG.md)记录本项目已做的修改。[双语规则对照](docs/PROMPT_RULES.md)可协助校对修订版；独立原文、忠实翻译与完整修改对照仍在规划中，见 [#14](https://github.com/chiisen/HUMAN3_PROMPT/issues/14)、[#15](https://github.com/chiisen/HUMAN3_PROMPT/issues/15) 与 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16)。上述本地说明以繁体中文为主。
+[变更日志](CHANGELOG.md)记录本项目已做的修改。[双语规则对照](docs/PROMPT_RULES.md)可协助校对修订版；独立原文、忠实翻译与完整修改对照仍在规划中，见 [#15](https://github.com/chiisen/HUMAN3_PROMPT/issues/15) 与 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16)。上述本地说明以繁体中文为主。
 
 维护者可阅读[维护指南](docs/MAINTENANCE.md)（繁体中文），查找双语区段检查、本地测试及 Git 远程配置。这些检查不代表模型一定遵守提示词，也不证明评估有效；外部模型的对话行为验收尚未执行。

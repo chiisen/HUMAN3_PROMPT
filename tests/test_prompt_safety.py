@@ -10,7 +10,7 @@ class PromptSafetyPolicyTests(unittest.TestCase):
         prompt = (ROOT / "PROMPT.md").read_text(encoding="utf-8")
 
         self.assertIn("High-Risk Actions: Safety Boundary", prompt)
-        self.assertIn("A HUMAN 3.01 level is not a safety clearance", prompt)
+        self.assertIn("A HUMAN 3.0 level is not a safety clearance", prompt)
         self.assertIn("qualified healthcare professional", prompt)
         self.assertIn("major financial, employment, or legal decisions", prompt)
         self.assertNotIn("Level 2.5-3.0 + Glitch = Calculated Risk", prompt)
@@ -21,7 +21,7 @@ class PromptSafetyPolicyTests(unittest.TestCase):
         prompt = (ROOT / "PROMPT_TW.md").read_text(encoding="utf-8")
 
         self.assertIn("高風險行為安全界線", prompt)
-        self.assertIn("HUMAN 3.01 分級不能判定高風險行為是否安全或適合個人", prompt)
+        self.assertIn("HUMAN 3.0 分級不能判定高風險行為是否安全或適合個人", prompt)
         self.assertIn("合格的醫療專業人員", prompt)
         self.assertIn("重大財務、工作或法律決策", prompt)
         self.assertNotIn("Level 2.5-3.0 + Glitch =", prompt)

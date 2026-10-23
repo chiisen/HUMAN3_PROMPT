@@ -15,7 +15,7 @@ This community project organizes and revises material from Dan Koe's [HUMAN 3.0 
 | This project's Traditional Chinese revision | [PROMPT_TW.md](PROMPT_TW.md) |
 | This project's Simplified Chinese revision | [PROMPT_CN.md](PROMPT_CN.md) |
 
-All three prompt files in this repository are community revisions. They still use the label “HUMAN 3.01,” which is this project's naming, not a new release from the original author. The Simplified Chinese version was converted from the Traditional Chinese revision and reviewed. The repository does not yet provide a separate original snapshot or a faithful translation of that original.
+All three prompt files in this repository are unofficial community revisions. The framework keeps Dan Koe's name, HUMAN 3.0; this project identifies its revisions by Git commits rather than assigning an official framework version number. The Simplified Chinese version was converted from the Traditional Chinese revision and reviewed. The repository does not yet provide a separate original snapshot or a faithful translation of that original.
 
 ## Get started
 
@@ -38,6 +38,6 @@ This is for adults who want to reflect on their experiences. It is not an empiri
 
 ## Sources, revisions, and maintenance
 
-The [changelog](CHANGELOG.md) records changes already made. The [bilingual rules comparison](docs/PROMPT_RULES.md) supports review of the revised prompts. A separate original, faithful translation, and full revision comparison are still being planned in [#14](https://github.com/chiisen/HUMAN3_PROMPT/issues/14), [#15](https://github.com/chiisen/HUMAN3_PROMPT/issues/15), and [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16). These local reference documents are mainly in Traditional Chinese.
+The [changelog](CHANGELOG.md) records changes already made. The [bilingual rules comparison](docs/PROMPT_RULES.md) supports review of the revised prompts. A separate original, faithful translation, and full revision comparison are still being planned in [#15](https://github.com/chiisen/HUMAN3_PROMPT/issues/15) and [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16). These local reference documents are mainly in Traditional Chinese.
 
 Maintainers can find paired-section checks, local tests, and Git remote configuration in the [maintenance guide](docs/MAINTENANCE.md), in Traditional Chinese. These checks do not establish that a model follows the prompt or that the assessment is valid. External-model conversation acceptance checks have not yet been run.
