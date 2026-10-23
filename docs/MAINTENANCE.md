@@ -6,9 +6,17 @@
 
 ## 提示詞維護
 
-- `PROMPT.md` 為主要維護來源；修改後再將相同意義同步至 `PROMPT_TW.md`。
-- 兩份提示詞以 `prompt-parity` 區段標記對應的重要內容，不要求翻譯逐字一致；新增或重組重要區段時，請在兩份文件保留相同的標記 ID：`model-fundamentals`、`high-risk-safety`、`interview-flow`、`report-format`。
+- `PROMPT.md` 為主要維護來源；修改後再將相同意義同步至 `PROMPT_TW.md`，最後依繁中修訂版更新 `PROMPT_CN.md` 並校對。三者皆為社群修訂版，簡中版不使用自由改寫或去 AI 味處理。
+- 三份提示詞以 `prompt-parity` 區段標記對應的重要內容，不要求翻譯逐字一致；新增或重組重要區段時，請在三份文件保留相同的標記 ID：`model-fundamentals`、`high-risk-safety`、`interview-flow`、`report-format`。
 - 使用 Python 標準函式庫執行 `python scripts/check_prompt_parity.py`，檢查必要區段是否在兩種語言中成對存在、標記唯一、內容非空，並比對兩語區段順序及巢狀關係，無需安裝額外套件。此檢查不判斷翻譯品質或語意是否完全等價，仍需人工校閱；請使用 [重要規則雙語對照](PROMPT_RULES.md) 逐項檢查。
+- 上述預設命令檢查英文與繁中；另執行 `python -B scripts/check_prompt_parity.py PROMPT_TW.md PROMPT_CN.md` 檢查繁中與簡中的區段。這沿用現有工具，不新增測試框架或 CI。
+
+### 簡中版本來源與校對
+
+- `PROMPT_CN.md` 依 [1606b7cdf59cbd57a7277af842f5bbe9334dd538 的 PROMPT_TW.md](https://github.com/chiisen/HUMAN3_PROMPT/blob/1606b7cdf59cbd57a7277af842f5bbe9334dd538/PROMPT_TW.md) 轉換；該來源檔案的 Git blob SHA 為 `9d0a2bb79a37cc46273e790c771b971e0e12f78e`。
+- 本次使用 Windows PowerShell 7 中的 `Microsoft.VisualBasic.Strings.StrConv`，指定 `VbStrConv.SimplifiedChinese` 與 LCID `2052`，僅轉換漢字並保留其餘字元，避免舊式轉換損失圖示。另校正殘留字形與用語：`後→后`、`於→于`、`徵→征`、`麽→么`、`谘→咨`、`蒐→搜`、`重覆→重复`、`反覆→反复`、`回覆→回复`、`计画→计划`。後續更新須同步記錄來源版本，不能把本次 SHA 當成永遠適用的來源。
+- 逐段核對否定詞、題數、跳過／停止、證據規則、摘要確認與高風險行為界線；保留段落、標記、數字、專有名詞與網址。這是修訂版的簡中轉換，不是原作者原文的忠實翻譯。
+- 字形、結構與內容對照不證明不同語言的模型行為等價；簡中版的實際模型對話驗收尚未執行。
 
 ## 驗證方式
 

@@ -1,6 +1,6 @@
 [繁體中文](README.md)｜[简体中文](README.zh-CN.md)｜[English](README.en.md)
 
-# Dan Koe HUMAN 3.0 提示詞：繁體中文與社群修訂版
+# Dan Koe HUMAN 3.0 提示詞：中英文社群修訂版
 
 把提示詞貼進 AI 對話，透過提問整理心智、身體、靈性與職業四個生活領域的經驗，再檢視 AI 提出的暫定觀察與下一步。
 
@@ -13,8 +13,9 @@
 | Dan Koe 發布的原文 | [作者文章](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and) |
 | 本專案英文修訂版 | [PROMPT.md](PROMPT.md) |
 | 本專案繁體中文修訂版 | [PROMPT_TW.md](PROMPT_TW.md) |
+| 本專案簡體中文修訂版 | [PROMPT_CN.md](PROMPT_CN.md) |
 
-目前倉庫內的兩份提示詞均為社群修訂版，內容仍使用「HUMAN 3.01」標示；這是本專案的命名，不代表原作者發布了新版本。倉庫尚未提供獨立原文快照、忠實譯本或簡體中文提示詞；簡中與英文 README 是使用說明的翻譯。
+目前倉庫內的三份提示詞均為社群修訂版，內容仍使用「HUMAN 3.01」標示；這是本專案的命名，不代表原作者發布了新版本。簡體中文版本由繁中修訂版轉換並校對；倉庫尚未提供獨立原文快照或原文的忠實譯本。
 
 ## 開始使用
 
