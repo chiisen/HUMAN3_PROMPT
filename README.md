@@ -6,31 +6,42 @@
 
 本專案以 Dan Koe 的 [HUMAN 3.0 Self-Discovery & Metatype Test](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and) 為來源，由社群整理與修訂，並非官方版本。
 
-## 選擇版本
+想直接進行自我反思，從下方社群修訂版開始；想閱讀或比對 Dan Koe 原作，請看[研究原作](#research)。
 
-| 想閱讀的內容 | 入口 |
+## 使用社群修訂版
+
+選擇語言並開啟提示詞。不需要安裝程式、Python 或執行測試。
+
+| 語言與提示詞 | 正文開始 | 最後一段的開頭（整段複製） |
+|---|---|---|
+| [繁體中文](PROMPT_TW.md) | `你是一位直接且尊重使用者的自我反思訪談引導者` | `"成為多維度強化的自己` |
+| [简体中文](PROMPT_CN.md) | `你是一位直接且尊重使用者的自我反思访谈引导者` | `"成为多维度强化的自己` |
+| [English](PROMPT.md) | `You are a direct, respectful self-reflection interview guide` | `"Become multidimensionally jacked` |
+
+1. 略過檔首的來源說明，從表列角色指令的首段開始，連續複製到最後引文的結尾，包含中間所有內容。
+2. 選擇你信任、且已了解其隱私設定的 AI 服務，將正文貼入新對話並送出。
+3. 等 AI 開始提問後，逐題回答，只分享自己願意提供的資訊。你可以跳過任何問題、暫停或停止訪談。
+4. 訪談後先檢查短摘要，修正不準確處，再選擇完整報告、特定章節或停在摘要。確認並選定範圍後，AI 應直接產出。
+5. 修訂版的行動建議預設為一個可逆的小實驗與回顧條件；額外任務或長期規劃只在你要求且有回答依據時展開。
+
+檔案中的 `<!-- prompt-parity:… -->` 是維護註解，可隨正文一起複製，不必逐一刪除，也不用當成步驟執行。這不保證每個 AI 服務都會忽略這些標記。
+
+想先看修訂版的輸出形式，可閱讀[合成報告](docs/RESULTS.md)或[簡易摘要](docs/RESULTS_EASY.md)。人物與回答皆為虛構，不能當成實際使用成效。
+
+<a id="research"></a>
+## 研究原作
+
+| 想閱讀或比對的材料 | 入口 |
 |---|---|
 | Dan Koe 發布的原文 | [作者文章](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and) |
 | 已核對來源的英文原文參考 | [ORIGINAL.md](reference/ORIGINAL.md) |
-| 對應該英文參考的非官方繁中譯本 | [TRANSLATION_TW.md](reference/TRANSLATION_TW.md) |
-| 本專案英文修訂版 | [PROMPT.md](PROMPT.md) |
-| 本專案繁體中文修訂版 | [PROMPT_TW.md](PROMPT_TW.md) |
-| 本專案簡體中文修訂版 | [PROMPT_CN.md](PROMPT_CN.md) |
+| 對應該英文參考的非官方忠實繁中譯本 | [TRANSLATION_TW.md](reference/TRANSLATION_TW.md) |
 
 根目錄的三份提示詞為非官方社群修訂版；原文參考與忠實繁中譯本獨立放在 `reference/`，保留原作規則供比對。來源、核對日期、內容指紋與譯註見[來源說明](reference/README.md)；英文參考不是發布當日的 HTML 快照。
 
 框架名稱沿用 Dan Koe 的 HUMAN 3.0，本專案以 Git 提交識別修訂，不另設官方框架版本號。簡體中文修訂版由繁中修訂版轉換並校對，並非原文譯本。
 
-## 開始使用社群修訂版
-
-不需要安裝程式、Python 或執行測試。
-
-1. 選擇你信任、且已了解其隱私設定的 AI 服務，將上方其中一份修訂版提示詞完整貼入新對話。
-2. 依序回答問題，只分享自己願意提供的資訊。你可以要求跳過任何問題或停止訪談，也可以暫停。
-3. 訪談後先檢查短摘要，修正不準確處，再選擇完整報告、特定章節或停在摘要。確認並選定範圍後，AI 應直接產出。
-4. 修訂版的行動建議預設為一個可逆的小實驗與回顧條件；額外任務或長期規劃只在你要求且有回答依據時展開。
-
-想先看修訂版的輸出形式，可閱讀[合成報告](docs/RESULTS.md)或[簡易摘要](docs/RESULTS_EASY.md)。人物與回答皆為虛構，不能當成實際使用成效。
+若要將參考檔貼入對話，只複製 `<!-- reference-body:start -->` 與 `<!-- reference-body:end -->` 之間的正文，不包含標記及正文外的說明。原作規則與修訂版不同，上方摘要確認等操作預期只適用於社群修訂版。
 
 ## 使用前請留意
 

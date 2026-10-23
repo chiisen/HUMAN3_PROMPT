@@ -2,6 +2,10 @@
 
 ## 目前狀態（2026-10-23）
 
+- [ ] [#27 初次選版入口與提示詞複製指引](https://github.com/chiisen/HUMAN3_PROMPT/issues/27)：已實作，待 PR 審閱合併。
+
+### 前批結案
+
 截至 PR #25 合併，GitHub 已建立的 19 個優化 Issue 均已關閉，沒有待合併的功能 PR，也沒有待實作的既定優化任務。
 
 - [x] [#14 保留原名與非官方定位](https://github.com/chiisen/HUMAN3_PROMPT/issues/14)
