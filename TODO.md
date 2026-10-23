@@ -9,11 +9,11 @@
 - [x] [#12 縮減報告負擔與移除無用途分數](https://github.com/chiisen/HUMAN3_PROMPT/issues/12)
 - [x] [#13 CI、快取忽略與 Git 腳本防呆](https://github.com/chiisen/HUMAN3_PROMPT/issues/13)
 
-## HUMAN 3.01 提示詞優化
+## HUMAN 3.0 提示詞優化
 
 以下七項任務已透過 GitHub CLI（`gh`）建立為本專案 Issues。依安全風險與工作相依性排序，並以各 Issue 的完成條件驗收：
 
-1. [x] [#1 移除以 HUMAN 3.01 分級判定高風險加速器適用性的建議](https://github.com/chiisen/HUMAN3_PROMPT/issues/1) — 移除迷幻藥、PEDs／類固醇及刻意製造財務困境的分級建議。
+1. [x] [#1 移除以 HUMAN 3.0 分級判定高風險加速器適用性的建議](https://github.com/chiisen/HUMAN3_PROMPT/issues/1) — 移除迷幻藥、PEDs／類固醇及刻意製造財務困境的分級建議。
 2. [x] [#7 標示評估報告為示例並確認個人資料已去識別化](https://github.com/chiisen/HUMAN3_PROMPT/issues/7) — 來源與授權無法由 repo 證明，已改為虛構合成案例並標示限制。
 3. [x] [#4 建立英文與繁中提示詞的一致性檢查](https://github.com/chiisen/HUMAN3_PROMPT/issues/4) — 已標記必要區段並加入標準函式庫檢查工具。
 4. [x] [#2 要求發展判讀附上對話依據與不確定性](https://github.com/chiisen/HUMAN3_PROMPT/issues/2) — 讓結論可追溯，並在資料不足時保留判斷。

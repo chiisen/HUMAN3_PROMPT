@@ -15,7 +15,7 @@
 | 本專案繁體中文修訂版 | [PROMPT_TW.md](PROMPT_TW.md) |
 | 本專案簡體中文修訂版 | [PROMPT_CN.md](PROMPT_CN.md) |
 
-目前倉庫內的三份提示詞均為社群修訂版，內容仍使用「HUMAN 3.01」標示；這是本專案的命名，不代表原作者發布了新版本。簡體中文版本由繁中修訂版轉換並校對；倉庫尚未提供獨立原文快照或原文的忠實譯本。
+目前倉庫內的三份提示詞均為非官方社群修訂版。框架名稱沿用 Dan Koe 的 HUMAN 3.0，本專案以 Git 提交識別修訂，不另設官方框架版本號。簡體中文版本由繁中修訂版轉換並校對；倉庫尚未提供獨立原文快照或原文的忠實譯本。
 
 ## 開始使用
 
@@ -38,6 +38,6 @@
 
 ## 來源、修訂與維護
 
-[變更日誌](CHANGELOG.md)記錄本專案已做的修改。[雙語規則對照](docs/PROMPT_RULES.md)可協助校閱修訂版；獨立原文、忠實翻譯與完整修改對照仍在整理規劃中，見 [#14](https://github.com/chiisen/HUMAN3_PROMPT/issues/14)、[#15](https://github.com/chiisen/HUMAN3_PROMPT/issues/15) 與 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16)。
+[變更日誌](CHANGELOG.md)記錄本專案已做的修改。[雙語規則對照](docs/PROMPT_RULES.md)可協助校閱修訂版；獨立原文、忠實翻譯與完整修改對照仍在整理規劃中，見 [#15](https://github.com/chiisen/HUMAN3_PROMPT/issues/15) 與 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16)。
 
 維護者可閱讀[維護指南](docs/MAINTENANCE.md)，查找雙語區段檢查、本機測試及 Git 遠端設定。這些檢查不代表模型一定遵守提示詞，也不證明評估有效；外部模型的對話行為驗收尚未執行。
