@@ -42,6 +42,6 @@
 
 ## 来源、修订与维护
 
-[变更日志](CHANGELOG.md)记录本项目已做的修改。[双语规则对照](docs/PROMPT_RULES.md)可协助校对修订版；英文参考与繁中译本的对应关系见[来源说明](reference/README.md)，完整的原版／修订差异整理仍在 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16) 规划中。上述本地说明以繁体中文为主。
+[变更日志](CHANGELOG.md)记录本项目已做的修改。[双语规则对照](docs/PROMPT_RULES.md)可协助校对修订版；英文参考与繁中译本的对应关系见[来源说明](reference/README.md)，[原文／修订差异对照](docs/REVISION_COMPARISON.md)逐项记录修改动机、取舍、对应段落及尚未证实的效果。维护者的文字与流程调整不代表心理评估更准确、科学验证或原作者认可。上述本地说明以繁体中文为主。
 
 维护者可阅读[维护指南](docs/MAINTENANCE.md)（繁体中文），查找双语区段检查、本地测试及 Git 远程配置。这些检查不代表模型一定遵守提示词，也不证明评估有效；外部模型的对话行为验收尚未执行。

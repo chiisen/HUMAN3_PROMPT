@@ -42,6 +42,6 @@
 
 ## 來源、修訂與維護
 
-[變更日誌](CHANGELOG.md)記錄本專案已做的修改。[雙語規則對照](docs/PROMPT_RULES.md)可協助校閱修訂版；英文參考與繁中譯本的對應關係見[來源說明](reference/README.md)，完整的原版／修訂差異整理仍在 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16) 規劃中。
+[變更日誌](CHANGELOG.md)記錄本專案已做的修改。[雙語規則對照](docs/PROMPT_RULES.md)可協助校閱修訂版；英文參考與繁中譯本的對應關係見[來源說明](reference/README.md)，[原文／修訂差異對照](docs/REVISION_COMPARISON.md)逐項記錄修改動機、取捨、對應段落及未證實的效果。維護者的文字與流程調整不代表心理評估更準確、科學驗證或原作者認可。
 
 維護者可閱讀[維護指南](docs/MAINTENANCE.md)，查找雙語區段檢查、本機測試及 Git 遠端設定。這些檢查不代表模型一定遵守提示詞，也不證明評估有效；外部模型的對話行為驗收尚未執行。
