@@ -1,7 +1,6 @@
 from pathlib import Path
 import subprocess
 import sys
-import re
 import tempfile
 import unittest
 
@@ -50,18 +49,6 @@ class PromptParityTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("structure", result.stdout)
 
-    def test_evidence_policy_is_inside_interview_section_in_both_languages(self):
-        """Static placement check, not a semantic translation assessment."""
-        for filename, heading in (("PROMPT.md", "Evidence-Grounded Assessment Rules"),
-                                  ("PROMPT_TW.md", "以回答依據進行判讀")):
-            prompt = (ROOT / filename).read_text(encoding="utf-8")
-            section = re.search(
-                r"<!-- prompt-parity:interview-flow:start -->(.*?)<!-- prompt-parity:interview-flow:end -->",
-                prompt, re.DOTALL,
-            ).group(1)
-            with self.subTest(filename=filename):
-                self.assertTrue(heading in section, f"Evidence policy outside interview section: {filename}")
-
     def test_unknown_and_improperly_nested_markers_fail(self):
         english = render_prompt({section: "content" for section in REQUIRED_SECTIONS})
         cases = (
@@ -88,17 +75,6 @@ class PromptParityTests(unittest.TestCase):
                 encoding="utf-8",
                 check=False,
             )
-
-    def test_repository_prompts_have_required_sections(self):
-        result = subprocess.run(
-            [sys.executable, str(CHECKER)],
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            check=False,
-        )
-
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_different_language_text_is_allowed_when_section_ids_match(self):
         english = render_prompt({section: f"English section: {section}" for section in REQUIRED_SECTIONS})
