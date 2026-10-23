@@ -61,4 +61,4 @@ This directory contains an English text reference checked against Dan Koe's publ
 
 `scripts/check_prompt_parity.py` 的預設路徑是根目錄 `PROMPT.md`／`PROMPT_TW.md`；簡中檢查亦明確指定根目錄文件。本目錄不加 `prompt-parity` 標記、不納入社群版固定句子或安全政策的測試範圍，不能為了通過這些檢查改寫原文。
 
-原文與譯文是否對應，依來源指紋、段落校閱與譯註判斷；不同語言的模型行為、評估有效性及使用效果尚未因此獲得驗證。完整的原版／社群修訂差異整理另見 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16)。
+原文與譯文是否對應，依來源指紋、段落校閱與譯註判斷；不同語言的模型行為、評估有效性及使用效果尚未因此獲得驗證。原版／社群修訂版的重要行為差異、設計動機、取捨及證據限制見[修訂差異對照](../docs/REVISION_COMPARISON.md)。

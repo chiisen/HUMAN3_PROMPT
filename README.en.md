@@ -42,6 +42,6 @@ This is for adults who want to reflect on their experiences. It is not an empiri
 
 ## Sources, revisions, and maintenance
 
-The [changelog](CHANGELOG.md) records changes already made. The [bilingual rules comparison](docs/PROMPT_RULES.md) supports review of the revised prompts. The [provenance notes](reference/README.md) document the English reference and its Traditional Chinese translation. A full source-versus-revision comparison is still being planned in [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16). These local reference documents are mainly in Traditional Chinese.
+The [changelog](CHANGELOG.md) records changes already made. The [bilingual rules comparison](docs/PROMPT_RULES.md) supports review of the revised prompts. The [provenance notes](reference/README.md) document the English reference and its Traditional Chinese translation. The [source-versus-revision comparison](docs/REVISION_COMPARISON.md) records the reasons, trade-offs, source passages, and unproven effects of each major change. Editorial and workflow changes do not establish greater psychological accuracy, scientific validation, or the author's endorsement. These local reference documents are mainly in Traditional Chinese.
 
 Maintainers can find paired-section checks, local tests, and Git remote configuration in the [maintenance guide](docs/MAINTENANCE.md), in Traditional Chinese. These checks do not establish that a model follows the prompt or that the assessment is valid. External-model conversation acceptance checks have not yet been run.
