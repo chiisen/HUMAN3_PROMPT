@@ -10,6 +10,7 @@
 
 ### 文件
 
+- 精簡繁中 README，新增簡中與英文版本及語言切換，補原作者來源與現有修訂版定位；將本機檢查及 Git 設定移至維護指南（#18）。
 - 移除 GitHub Actions CI workflow，並刪除 README 與驗收模板中的 CI 操作說明。
 - 將專案提示詞、使用說明、示例與驗收文件中的框架名稱統一更新為 HUMAN 3.01。
 - 加入固定官方 Action SHA 的 Windows CI 與 Python 快取忽略；Git 設定腳本寫入前驗證所有 origin fetch URL，補上拒絕錯誤倉庫、子目錄與多 URL 回歸測試；CI 檢查已提交範圍並補真實提交回歸，移除繁中既有 EOF 空白（#13）。
