@@ -1,6 +1,6 @@
 [繁體中文](README.md)｜[简体中文](README.zh-CN.md)｜[English](README.en.md)
 
-# Dan Koe HUMAN 3.0 prompts: Traditional Chinese and community revisions
+# Dan Koe HUMAN 3.0 prompts: community revisions in English and Chinese
 
 Paste a prompt into an AI conversation to reflect on your experiences across Mind, Body, Spirit, and Vocation, then review the AI's tentative observations and suggested next step.
 
@@ -13,8 +13,9 @@ This community project organizes and revises material from Dan Koe's [HUMAN 3.0 
 | The original published by Dan Koe | [Author's article](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and) |
 | This project's English revision | [PROMPT.md](PROMPT.md) |
 | This project's Traditional Chinese revision | [PROMPT_TW.md](PROMPT_TW.md) |
+| This project's Simplified Chinese revision | [PROMPT_CN.md](PROMPT_CN.md) |
 
-Both prompt files in this repository are community revisions. They still use the label “HUMAN 3.01,” which is this project's naming, not a new release from the original author. The repository does not yet provide a separate original snapshot, a faithful translation of that original, or a Simplified Chinese prompt. The Simplified Chinese and English READMEs translate the usage guide.
+All three prompt files in this repository are community revisions. They still use the label “HUMAN 3.01,” which is this project's naming, not a new release from the original author. The Simplified Chinese version was converted from the Traditional Chinese revision and reviewed. The repository does not yet provide a separate original snapshot or a faithful translation of that original.
 
 ## Get started
 
