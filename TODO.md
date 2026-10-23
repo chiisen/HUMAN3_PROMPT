@@ -1,5 +1,20 @@
 # TODO
 
+## 目前狀態（2026-10-23）
+
+截至 PR #25 合併，GitHub 已建立的 19 個優化 Issue 均已關閉，沒有待合併的功能 PR，也沒有待實作的既定優化任務。
+
+- [x] [#14 保留原名與非官方定位](https://github.com/chiisen/HUMAN3_PROMPT/issues/14)
+- [x] [#15 原文、忠實翻譯與修訂版分流](https://github.com/chiisen/HUMAN3_PROMPT/issues/15)
+- [x] [#16 修訂差異對照與驗證界線](https://github.com/chiisen/HUMAN3_PROMPT/issues/16)
+- [x] [#17 精簡測試與輔助工具](https://github.com/chiisen/HUMAN3_PROMPT/issues/17)
+- [x] [#18 三語 README 與文字精簡](https://github.com/chiisen/HUMAN3_PROMPT/issues/18)
+- [x] [#20 簡體中文提示詞](https://github.com/chiisen/HUMAN3_PROMPT/issues/20)
+
+實際模型對話、原文／修訂版比較及外部專業譯者審閱尚未執行，屬已揭露的驗證限制，不是上述 Issue 遺漏的實作。日後若執行，沿用既有案例與模板，另記版本、設定及原始輸出。
+
+下方保留歷史完成項目；#13 當時加入的 CI 已依使用者要求移除，#17 亦移除失去用途的 CI 輔助工具，不表示目前仍有 CI。
+
 ## 後續優化（#8～#13）
 
 - [x] [#8 統一提示詞定位與證據優先規則](https://github.com/chiisen/HUMAN3_PROMPT/issues/8)：本機驗收後逐項推送與關閉。
