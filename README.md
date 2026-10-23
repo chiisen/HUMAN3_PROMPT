@@ -6,18 +6,22 @@
 
 本專案以 Dan Koe 的 [HUMAN 3.0 Self-Discovery & Metatype Test](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and) 為來源，由社群整理與修訂，並非官方版本。
 
-## 選擇提示詞
+## 選擇版本
 
 | 想閱讀的內容 | 入口 |
 |---|---|
 | Dan Koe 發布的原文 | [作者文章](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and) |
+| 已核對來源的英文原文參考 | [ORIGINAL.md](reference/ORIGINAL.md) |
+| 對應該英文參考的非官方繁中譯本 | [TRANSLATION_TW.md](reference/TRANSLATION_TW.md) |
 | 本專案英文修訂版 | [PROMPT.md](PROMPT.md) |
 | 本專案繁體中文修訂版 | [PROMPT_TW.md](PROMPT_TW.md) |
 | 本專案簡體中文修訂版 | [PROMPT_CN.md](PROMPT_CN.md) |
 
-目前倉庫內的三份提示詞均為非官方社群修訂版。框架名稱沿用 Dan Koe 的 HUMAN 3.0，本專案以 Git 提交識別修訂，不另設官方框架版本號。簡體中文版本由繁中修訂版轉換並校對；倉庫尚未提供獨立原文快照或原文的忠實譯本。
+根目錄的三份提示詞為非官方社群修訂版；原文參考與忠實繁中譯本獨立放在 `reference/`，保留原作規則供比對。來源、核對日期、內容指紋與譯註見[來源說明](reference/README.md)；英文參考不是發布當日的 HTML 快照。
 
-## 開始使用
+框架名稱沿用 Dan Koe 的 HUMAN 3.0，本專案以 Git 提交識別修訂，不另設官方框架版本號。簡體中文修訂版由繁中修訂版轉換並校對，並非原文譯本。
+
+## 開始使用社群修訂版
 
 不需要安裝程式、Python 或執行測試。
 
@@ -26,7 +30,7 @@
 3. 訪談後先檢查短摘要，修正不準確處，再選擇完整報告、特定章節或停在摘要。確認並選定範圍後，AI 應直接產出。
 4. 修訂版的行動建議預設為一個可逆的小實驗與回顧條件；額外任務或長期規劃只在你要求且有回答依據時展開。
 
-想先看輸出形式，可閱讀[合成報告](docs/RESULTS.md)或[簡易摘要](docs/RESULTS_EASY.md)。人物與回答皆為虛構，不能當成實際使用成效。
+想先看修訂版的輸出形式，可閱讀[合成報告](docs/RESULTS.md)或[簡易摘要](docs/RESULTS_EASY.md)。人物與回答皆為虛構，不能當成實際使用成效。
 
 ## 使用前請留意
 
@@ -38,6 +42,6 @@
 
 ## 來源、修訂與維護
 
-[變更日誌](CHANGELOG.md)記錄本專案已做的修改。[雙語規則對照](docs/PROMPT_RULES.md)可協助校閱修訂版；獨立原文、忠實翻譯與完整修改對照仍在整理規劃中，見 [#15](https://github.com/chiisen/HUMAN3_PROMPT/issues/15) 與 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16)。
+[變更日誌](CHANGELOG.md)記錄本專案已做的修改。[雙語規則對照](docs/PROMPT_RULES.md)可協助校閱修訂版；英文參考與繁中譯本的對應關係見[來源說明](reference/README.md)，完整的原版／修訂差異整理仍在 [#16](https://github.com/chiisen/HUMAN3_PROMPT/issues/16) 規劃中。
 
 維護者可閱讀[維護指南](docs/MAINTENANCE.md)，查找雙語區段檢查、本機測試及 Git 遠端設定。這些檢查不代表模型一定遵守提示詞，也不證明評估有效；外部模型的對話行為驗收尚未執行。
