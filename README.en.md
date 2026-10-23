@@ -6,31 +6,42 @@ Paste a prompt into an AI conversation to reflect on your experiences across Min
 
 This community project organizes and revises material from Dan Koe's [HUMAN 3.0 Self-Discovery & Metatype Test](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and). It is not an official edition.
 
-## Choose a version
+For guided self-reflection, start with a community revision below. To read or compare Dan Koe's original, see [Study the original](#research).
 
-| What you want to read | Link |
+## Use the community revision
+
+Choose a language and open its prompt. You do not need to install software, Python, or run tests.
+
+| Language and prompt | Body starts with | Final paragraph starts with (copy the whole paragraph) |
+|---|---|---|
+| [繁體中文](PROMPT_TW.md) | `你是一位直接且尊重使用者的自我反思訪談引導者` | `"成為多維度強化的自己` |
+| [简体中文](PROMPT_CN.md) | `你是一位直接且尊重使用者的自我反思访谈引导者` | `"成为多维度强化的自己` |
+| [English](PROMPT.md) | `You are a direct, respectful self-reflection interview guide` | `"Become multidimensionally jacked` |
+
+1. Skip the source note at the top of the file. Copy continuously from the opening role paragraph shown in the table through the end of the final quotation, including everything in between.
+2. Choose an AI service you trust and review its privacy settings. Paste the body into a new conversation and send it.
+3. Wait for the AI to start asking questions, then answer in turn, sharing only what you choose. You can skip any question, pause, or stop the interview.
+4. Review the short summary first and correct inaccuracies. Then choose a full report, selected sections, or the summary alone. Once you confirm and choose the scope, the AI should produce it directly.
+5. The revised prompts default to one small, reversible experiment with a review condition. Extra tasks or longer plans are included only when you request them and your answers support them.
+
+The `<!-- prompt-parity:… -->` comments are maintenance markers. You can copy them with the body without deleting them individually; they are not steps to perform. This does not guarantee that every AI service ignores them.
+
+For examples of the revised prompts' output, see the [synthetic report](docs/RESULTS.md) or [brief summary](docs/RESULTS_EASY.md), both in Traditional Chinese. The people and answers are fictional; these are not evidence of actual results.
+
+<a id="research"></a>
+## Study the original
+
+| Material to read or compare | Link |
 |---|---|
 | The original published by Dan Koe | [Author's article](https://letters.thedankoe.com/p/prompt-human-30-self-discovery-and) |
 | English source reference checked against the article | [ORIGINAL.md](reference/ORIGINAL.md) |
 | Unofficial faithful Traditional Chinese translation of that reference | [TRANSLATION_TW.md](reference/TRANSLATION_TW.md) |
-| This project's English revision | [PROMPT.md](PROMPT.md) |
-| This project's Traditional Chinese revision | [PROMPT_TW.md](PROMPT_TW.md) |
-| This project's Simplified Chinese revision | [PROMPT_CN.md](PROMPT_CN.md) |
 
 The three prompt files in the repository root are unofficial community revisions. The English reference and faithful Traditional Chinese translation are kept separately in `reference/`, preserving the source's rules for comparison. See the [provenance notes](reference/README.md), mainly in Traditional Chinese, for the source, check date, fingerprints, and translation notes. The English reference is not a publication-day HTML archive.
 
 The framework keeps Dan Koe's name, HUMAN 3.0; this project identifies its revisions by Git commits rather than assigning an official framework version number. The Simplified Chinese community revision was converted from the Traditional Chinese revision and reviewed; it is not a translation of the original.
 
-## Use the community revision
-
-You do not need to install software, Python, or run tests.
-
-1. Choose an AI service you trust and review its privacy settings. Paste one complete revised prompt from the table above into a new conversation.
-2. Answer the questions in turn, sharing only what you choose. You can skip any question, pause, or stop the interview.
-3. Review the short summary first and correct inaccuracies. Then choose a full report, selected sections, or the summary alone. Once you confirm and choose the scope, the AI should produce it directly.
-4. The revised prompts default to one small, reversible experiment with a review condition. Extra tasks or longer plans are included only when you request them and your answers support them.
-
-For examples of the revised prompts' output, see the [synthetic report](docs/RESULTS.md) or [brief summary](docs/RESULTS_EASY.md), both in Traditional Chinese. The people and answers are fictional; these are not evidence of actual results.
+To paste a reference file into a conversation, copy only the body between `<!-- reference-body:start -->` and `<!-- reference-body:end -->`, excluding the markers and notes outside the body. The original has different rules; the summary-confirmation flow described above applies only to the community revision.
 
 ## Before you use it
 
